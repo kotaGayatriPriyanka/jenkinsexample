@@ -14,7 +14,7 @@ import com.hcl.beans.*;
 public interface ResturantDAO extends JpaRepository<Resturant, Integer>{
 	public Resturant findByResName(String resName);
 	public List<Resturant> findByResRating(float resRating);
-	
+	//edit
 	@Query(value="select * from resturant where res_rating >:rating",nativeQuery = true)
 	public List<Resturant> searchByResRating1(@Param("rating") float rating);
 	//public Resturant findByResName(String res_name);
